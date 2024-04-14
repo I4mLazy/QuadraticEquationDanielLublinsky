@@ -10,6 +10,7 @@ import java.util.Random;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
+import android.content.Intent;
 public class MainActivity extends AppCompatActivity
 {
     EditText a;
@@ -51,6 +52,6 @@ public class MainActivity extends AppCompatActivity
 
     public void Calculate(View view)
     {
-
+        Intent si = new Intent(this, );
     }
 }
