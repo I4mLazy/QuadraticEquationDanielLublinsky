@@ -52,6 +52,13 @@ public class MainActivity extends AppCompatActivity
 
     public void Calculate(View view)
     {
-        Intent si = new Intent(this, );
+        if(!(a.getText().toString().isEmpty()) && !(b.getText().toString().isEmpty()) && !(c.getText().toString().isEmpty()))
+        {
+            Intent si = new Intent(this, MainActivity2.class);
+            si.putExtra("a", a.toString());
+            si.putExtra("b", b.toString());
+            si.putExtra("c", c.toString());
+            startActivity(si);
+        }
     }
 }
