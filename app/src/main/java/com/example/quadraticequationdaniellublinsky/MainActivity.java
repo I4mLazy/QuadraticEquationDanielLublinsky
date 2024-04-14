@@ -44,9 +44,9 @@ public class MainActivity extends AppCompatActivity
         int fn = random.nextInt(201)-100;
         int sn = random.nextInt(201)-100;
         int tn = random.nextInt(201)-100;
-        a.setText(fn);
-        b.setText(sn);
-        c.setText(tn);
+        a.setText(String.valueOf(fn));
+        b.setText(String.valueOf(sn));
+        c.setText(String.valueOf(tn));
     }
 
     public void Calculate(View view)
