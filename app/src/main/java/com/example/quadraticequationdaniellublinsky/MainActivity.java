@@ -1,5 +1,5 @@
 package com.example.quadraticequationdaniellublinsky;
-
+import android.widget.TextView;
 import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity
     EditText c;
     Button Randomize;
     Button Calc;
+    TextView lastans;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity
         c = findViewById(R.id.c);
         Randomize = findViewById(R.id.Randomize);
         Calc = findViewById(R.id.Calc);
+        lastans = findViewById(R.id.lastans);
+        lastans.setVisibility(View.INVISIBLE);
     }
 
 
@@ -55,10 +58,10 @@ public class MainActivity extends AppCompatActivity
         if(!(a.getText().toString().isEmpty()) && !(b.getText().toString().isEmpty()) && !(c.getText().toString().isEmpty()))
         {
             Intent si = new Intent(this, MainActivity2.class);
-            si.putExtra("a", a.toString());
-            si.putExtra("b", b.toString());
-            si.putExtra("c", c.toString());
-            startActivity(si);
+            si.putExtra("a", a.getText().toString());
+            si.putExtra("b", b.getText().toString());
+            si.putExtra("c", c.getText().toString());
+            startActivityForResult(si,1);
         }
     }
 }
