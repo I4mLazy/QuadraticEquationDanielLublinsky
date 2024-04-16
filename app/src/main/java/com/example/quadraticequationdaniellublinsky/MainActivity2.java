@@ -64,7 +64,7 @@ public class MainActivity2 extends AppCompatActivity
     {
         Intent si = new Intent(this, MainActivity.class);
         si.putExtra("ans", ans.getText().toString());
-        setResult(1, si);
+        setResult(RESULT_OK, si);
         finish();
     }
 }
